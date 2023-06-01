@@ -1,11 +1,11 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Sprites/j1_idle.png" type="Texture" id=1]
 [ext_resource path="res://Calisto.gd" type="Script" id=2]
 [ext_resource path="res://Tile/l1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/j1_run.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/j1_jump.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/j1_down.png" type="Texture" id=6]
+[ext_resource path="res://bala_basic.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 705.001, 2.1875 )
@@ -136,93 +136,6 @@ tracks/7/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=17]
-resource_name = "j_agachado"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Cuerpo/CalistoSpr:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 6 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Cuerpo/CalistoSpr:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 14 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Cuerpo/CalistoSpr:hframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 1 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Cuerpo/CalistoSpr:vframes")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 1 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Cuerpo/Colision:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 16 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Cuerpo/Colision:scale")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1.4, 0.4 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Cuerpo/CalistoSpr:frame_coords")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-
 [sub_resource type="Animation" id=4]
 resource_name = "j_corriendo"
 length = 0.5
@@ -300,18 +213,12 @@ tracks/5/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4 ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("Cuerpo/CalistoSpr:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
+
+[sub_resource type="Animation" id=5]
+resource_name = "j_diagab"
+
+[sub_resource type="Animation" id=6]
+resource_name = "j_diagarr"
 
 [sub_resource type="Animation" id=3]
 resource_name = "j_idle"
@@ -453,20 +360,8 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 0.75, 0.6 ) ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath("Cuerpo/CalistoSpr:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -1 ) ]
-}
 
-[node name="Node2D" type="Node2D"]
+[node name="main" type="Node2D" groups=["main"]]
 
 [node name="Mapa" type="Sprite" parent="."]
 position = Vector2( 2712, 300 )
@@ -475,7 +370,6 @@ texture = ExtResource( 3 )
 
 [node name="suelo1" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -1687.5, -13.125 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo1"]
 position = Vector2( 695, -0.3125 )
@@ -484,7 +378,6 @@ shape = SubResource( 8 )
 
 [node name="suelo2" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo2"]
 position = Vector2( 1853.75, 45 )
@@ -501,7 +394,6 @@ shape = SubResource( 8 )
 
 [node name="suelo3" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo3"]
 position = Vector2( 1917.81, 77.1875 )
@@ -510,7 +402,6 @@ shape = SubResource( 10 )
 
 [node name="suelo4" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo4"]
 position = Vector2( 1966.88, 110 )
@@ -519,7 +410,6 @@ shape = SubResource( 11 )
 
 [node name="suelo5" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo5"]
 position = Vector2( 2013.75, 77.5 )
@@ -528,7 +418,6 @@ shape = SubResource( 12 )
 
 [node name="suelo6" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo6"]
 position = Vector2( 2093.75, 45 )
@@ -537,7 +426,6 @@ shape = SubResource( 13 )
 
 [node name="suelo7" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo7"]
 position = Vector2( 2285.94, 109.063 )
@@ -546,7 +434,6 @@ shape = SubResource( 14 )
 
 [node name="suelo8" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo8"]
 position = Vector2( 2333.44, 60.625 )
@@ -555,7 +442,6 @@ shape = SubResource( 15 )
 
 [node name="suelo10" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -1687.5, -13.125 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo10"]
 position = Vector2( 1591.88, -31.25 )
@@ -565,6 +451,7 @@ shape = SubResource( 16 )
 [node name="Calisto" type="Position2D" parent="."]
 position = Vector2( 118, 243 )
 script = ExtResource( 2 )
+balaPrinc = ExtResource( 6 )
 
 [node name="Cuerpo" type="KinematicBody2D" parent="Calisto"]
 
@@ -580,9 +467,15 @@ shape = SubResource( 1 )
 current = true
 zoom = Vector2( 0.4, 0.4 )
 
+[node name="spawBala" type="Position2D" parent="Calisto/Cuerpo"]
+position = Vector2( -9, 4 )
+
 [node name="animacion_J1" type="AnimationPlayer" parent="Calisto"]
 anims/RESET = SubResource( 2 )
-anims/j_agachado = SubResource( 17 )
 anims/j_corriendo = SubResource( 4 )
+anims/j_diagab = SubResource( 5 )
+anims/j_diagarr = SubResource( 6 )
 anims/j_idle = SubResource( 3 )
 anims/j_salto = SubResource( 7 )
+
+[node name="CuerpoBala" parent="." instance=ExtResource( 6 )]
