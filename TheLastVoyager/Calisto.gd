@@ -17,6 +17,7 @@ func _physics_process(delta):
 		get_node("Cuerpo/spawBala").position = spawnB_izq
 	else:
 		get_node("Cuerpo/spawBala").position.x *= -1
+		
 	if(Input.is_action_pressed("tecla_a")):
 		Velocidad.x = -VEL_MOVIMIENTO
 		get_node("Cuerpo/spawBala").position = spawnB_izq

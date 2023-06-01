@@ -969,7 +969,6 @@ shape = SubResource( 40 )
 
 [node name="suelo33" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo33"]
 position = Vector2( 4655, 78.125 )
@@ -978,7 +977,6 @@ shape = SubResource( 41 )
 
 [node name="suelo34" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo34"]
 position = Vector2( 4751.25, 45.3125 )
@@ -987,7 +985,6 @@ shape = SubResource( 42 )
 
 [node name="suelo35" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo35"]
 position = Vector2( 4863.13, 62.5 )
@@ -996,7 +993,6 @@ shape = SubResource( 43 )
 
 [node name="suelo36" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo36"]
 position = Vector2( 4847.5, 13.75 )
@@ -1005,7 +1001,6 @@ shape = SubResource( 44 )
 
 [node name="suelo37" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo37"]
 position = Vector2( 4926.25, 46.25 )
@@ -1014,7 +1009,6 @@ shape = SubResource( 45 )
 
 [node name="suelo38" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo38"]
 position = Vector2( 4958.44, 77.1875 )
@@ -1023,7 +1017,6 @@ shape = SubResource( 46 )
 
 [node name="suelo39" type="StaticBody2D" parent="Mapa" groups=["suelo"]]
 position = Vector2( -3375, -26.25 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/suelo39"]
 position = Vector2( 4906.88, 110.313 )
