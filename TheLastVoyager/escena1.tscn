@@ -5,6 +5,7 @@
 [ext_resource path="res://Tile/l1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/j1_run.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/j1_jump.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/j1_down.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 705.001, 2.1875 )
@@ -135,6 +136,93 @@ tracks/7/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
+[sub_resource type="Animation" id=17]
+resource_name = "j_agachado"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cuerpo/CalistoSpr:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Cuerpo/CalistoSpr:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 14 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Cuerpo/CalistoSpr:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cuerpo/CalistoSpr:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Cuerpo/Colision:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 16 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Cuerpo/Colision:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.4, 0.4 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Cuerpo/CalistoSpr:frame_coords")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
 [sub_resource type="Animation" id=4]
 resource_name = "j_corriendo"
 length = 0.5
@@ -212,12 +300,18 @@ tracks/5/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4 ]
 }
-
-[sub_resource type="Animation" id=5]
-resource_name = "j_diagab"
-
-[sub_resource type="Animation" id=6]
-resource_name = "j_diagarr"
+tracks/6/type = "value"
+tracks/6/path = NodePath("Cuerpo/CalistoSpr:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "j_idle"
@@ -359,6 +453,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 0.75, 0.6 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Cuerpo/CalistoSpr:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1 ) ]
+}
 
 [node name="Node2D" type="Node2D"]
 
@@ -476,8 +582,7 @@ zoom = Vector2( 0.4, 0.4 )
 
 [node name="animacion_J1" type="AnimationPlayer" parent="Calisto"]
 anims/RESET = SubResource( 2 )
+anims/j_agachado = SubResource( 17 )
 anims/j_corriendo = SubResource( 4 )
-anims/j_diagab = SubResource( 5 )
-anims/j_diagarr = SubResource( 6 )
 anims/j_idle = SubResource( 3 )
 anims/j_salto = SubResource( 7 )
