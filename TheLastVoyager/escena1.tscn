@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://Sprites/j1_idle.png" type="Texture" id=1]
 [ext_resource path="res://Calisto.gd" type="Script" id=2]
@@ -126,6 +126,15 @@ extents = Vector2( 120.625, 2.81249 )
 
 [sub_resource type="RectangleShape2D" id=48]
 extents = Vector2( 31.8751, 1.87499 )
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 3.75001, 10 )
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 2.5, 8.28126 )
+
+[sub_resource type="RectangleShape2D" id=75]
+extents = Vector2( 1818.44, 7.50001 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12, 16.5 )
@@ -706,9 +715,6 @@ tracks/5/keys = {
 "values": [ Vector2( -14, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=49]
-extents = Vector2( 10, 16 )
-
 [sub_resource type="Animation" id=52]
 resource_name = "Enem_jump"
 length = 0.6
@@ -744,6 +750,309 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=51]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="CircleShape2D" id=53]
+radius = 170.003
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 10, 16 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 8, 10 )
+
+[sub_resource type="Animation" id=57]
+resource_name = "Enem_jump"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=58]
+resource_name = "Enem_run"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=59]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=60]
+resource_name = "Enem_jump"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=61]
+resource_name = "Enem_run"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=62]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=63]
+resource_name = "Enem_jump"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=64]
+resource_name = "Enem_run"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=65]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=66]
+resource_name = "Enem_jump"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=67]
+resource_name = "Enem_run"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=68]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=69]
+resource_name = "Enem_jump"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=70]
+resource_name = "Enem_run"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=71]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "Enem_jump"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=73]
+resource_name = "Enem_run"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=74]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -1085,14 +1394,86 @@ position = Vector2( 2616.25, -31.875 )
 scale = Vector2( 0.999997, 0.999997 )
 shape = SubResource( 48 )
 
-[node name="Calisto" type="Position2D" parent="."]
+[node name="Pared" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -1687.5, -13.125 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared" groups=["pared"]]
+position = Vector2( -13.75, -8.125 )
+scale = Vector2( 0.999999, 0.999999 )
+shape = SubResource( 54 )
+
+[node name="Pared2" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -1687.5, -13.125 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared2" groups=["pared"]]
+position = Vector2( 1402.5, -7.5 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 55 )
+
+[node name="Pared3" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -1755, -43.75 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared3" groups=["pared"]]
+position = Vector2( 1402.5, -7.5 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 55 )
+
+[node name="Pared4" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -1241.25, -44.375 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared4" groups=["pared"]]
+position = Vector2( 1402.5, -7.5 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 55 )
+
+[node name="Pared5" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -1276.25, -11.875 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared5" groups=["pared"]]
+position = Vector2( 1402.5, -7.5 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 55 )
+
+[node name="Pared6" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -1048.13, -12.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared6" groups=["pared"]]
+position = Vector2( 1402.5, -7.5 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 55 )
+
+[node name="Pared7" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -1085, -43.75 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared7" groups=["pared"]]
+position = Vector2( 1402.5, -7.5 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 55 )
+
+[node name="Pared8" type="StaticBody2D" parent="Mapa" groups=["pared"]]
+position = Vector2( -921.25, -43.75 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/Pared8" groups=["pared"]]
+position = Vector2( 1402.5, -7.5 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 55 )
+
+[node name="lava" type="StaticBody2D" parent="Mapa" groups=["lava"]]
+position = Vector2( -1719.38, 99.375 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/lava"]
+position = Vector2( 1689.69, 6.25 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 75 )
+
+[node name="Calisto" type="Position2D" parent="." groups=["jugador"]]
 position = Vector2( 207, 143 )
 script = ExtResource( 2 )
 GRAVEDAD = 2000.0
 VEL_SALTO = 3500.0
 balaPrinc = ExtResource( 6 )
 
-[node name="Cuerpo" type="KinematicBody2D" parent="Calisto"]
+[node name="Cuerpo" type="KinematicBody2D" parent="Calisto" groups=["jugador"]]
 
 [node name="CalistoSpr" type="Sprite" parent="Calisto/Cuerpo"]
 texture = ExtResource( 1 )
@@ -1122,23 +1503,220 @@ anims/j_idle = SubResource( 3 )
 anims/j_salto = SubResource( 7 )
 
 [node name="Enemigo" type="KinematicBody2D" parent="."]
-position = Vector2( 295, 150 )
+position = Vector2( 486, 158 )
+collision_layer = 2
 script = ExtResource( 9 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="Enemigo"]
 texture = ExtResource( 8 )
 hframes = 3
 vframes = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo"]
-shape = SubResource( 49 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemigo"]
+[node name="animacion_en" type="AnimationPlayer" parent="Enemigo"]
 anims/Enem_jump = SubResource( 52 )
 anims/Enem_run = SubResource( 50 )
 anims/RESET = SubResource( 51 )
 
+[node name="AreaVision" type="Area2D" parent="Enemigo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo/AreaVision"]
+shape = SubResource( 53 )
+
+[node name="AreaAtaq" type="Area2D" parent="Enemigo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo/AreaAtaq"]
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo"]
+shape = SubResource( 56 )
+
+[node name="Enemigo2" type="KinematicBody2D" parent="."]
+position = Vector2( 825, 158 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo2"]
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 2
+
+[node name="animacion_en" type="AnimationPlayer" parent="Enemigo2"]
+anims/Enem_jump = SubResource( 57 )
+anims/Enem_run = SubResource( 58 )
+anims/RESET = SubResource( 59 )
+
+[node name="AreaVision" type="Area2D" parent="Enemigo2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo2/AreaVision"]
+shape = SubResource( 53 )
+
+[node name="AreaAtaq" type="Area2D" parent="Enemigo2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo2/AreaAtaq"]
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo2"]
+shape = SubResource( 56 )
+
+[node name="Enemigo3" type="KinematicBody2D" parent="."]
+position = Vector2( 1581, 159 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo3"]
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 2
+
+[node name="animacion_en" type="AnimationPlayer" parent="Enemigo3"]
+anims/Enem_jump = SubResource( 60 )
+anims/Enem_run = SubResource( 61 )
+anims/RESET = SubResource( 62 )
+
+[node name="AreaVision" type="Area2D" parent="Enemigo3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo3/AreaVision"]
+shape = SubResource( 53 )
+
+[node name="AreaAtaq" type="Area2D" parent="Enemigo3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo3/AreaAtaq"]
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo3"]
+shape = SubResource( 56 )
+
+[node name="Enemigo4" type="KinematicBody2D" parent="."]
+position = Vector2( 2414, 105 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo4"]
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 2
+
+[node name="animacion_en" type="AnimationPlayer" parent="Enemigo4"]
+anims/Enem_jump = SubResource( 63 )
+anims/Enem_run = SubResource( 64 )
+anims/RESET = SubResource( 65 )
+
+[node name="AreaVision" type="Area2D" parent="Enemigo4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo4/AreaVision"]
+shape = SubResource( 53 )
+
+[node name="AreaAtaq" type="Area2D" parent="Enemigo4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo4/AreaAtaq"]
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo4"]
+shape = SubResource( 56 )
+
+[node name="Enemigo5" type="KinematicBody2D" parent="."]
+position = Vector2( 3354, 103 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo5"]
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 2
+
+[node name="animacion_en" type="AnimationPlayer" parent="Enemigo5"]
+anims/Enem_jump = SubResource( 66 )
+anims/Enem_run = SubResource( 67 )
+anims/RESET = SubResource( 68 )
+
+[node name="AreaVision" type="Area2D" parent="Enemigo5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo5/AreaVision"]
+shape = SubResource( 53 )
+
+[node name="AreaAtaq" type="Area2D" parent="Enemigo5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo5/AreaAtaq"]
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo5"]
+shape = SubResource( 56 )
+
+[node name="Enemigo6" type="KinematicBody2D" parent="."]
+position = Vector2( 3180, 152 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo6"]
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 2
+
+[node name="animacion_en" type="AnimationPlayer" parent="Enemigo6"]
+anims/Enem_jump = SubResource( 69 )
+anims/Enem_run = SubResource( 70 )
+anims/RESET = SubResource( 71 )
+
+[node name="AreaVision" type="Area2D" parent="Enemigo6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo6/AreaVision"]
+shape = SubResource( 53 )
+
+[node name="AreaAtaq" type="Area2D" parent="Enemigo6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo6/AreaAtaq"]
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo6"]
+shape = SubResource( 56 )
+
+[node name="Enemigo7" type="KinematicBody2D" parent="."]
+position = Vector2( 2833, 100 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo7"]
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 2
+
+[node name="animacion_en" type="AnimationPlayer" parent="Enemigo7"]
+anims/Enem_jump = SubResource( 72 )
+anims/Enem_run = SubResource( 73 )
+anims/RESET = SubResource( 74 )
+
+[node name="AreaVision" type="Area2D" parent="Enemigo7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo7/AreaVision"]
+shape = SubResource( 53 )
+
+[node name="AreaAtaq" type="Area2D" parent="Enemigo7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo7/AreaAtaq"]
+shape = SubResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo7"]
+shape = SubResource( 56 )
+
 [connection signal="timeout" from="Calisto/Cuerpo/Tiempo" to="Calisto" method="_on_Tiempo_timeout"]
+[connection signal="body_entered" from="Enemigo/AreaVision" to="Enemigo" method="_on_AreaVision_body_entered"]
+[connection signal="body_exited" from="Enemigo/AreaVision" to="Enemigo" method="_on_AreaVision_body_exited"]
+[connection signal="body_entered" from="Enemigo/AreaAtaq" to="Enemigo" method="_on_AreaAtaq_body_entered"]
+[connection signal="body_entered" from="Enemigo2/AreaVision" to="Enemigo2" method="_on_AreaVision_body_entered"]
+[connection signal="body_exited" from="Enemigo2/AreaVision" to="Enemigo2" method="_on_AreaVision_body_exited"]
+[connection signal="body_entered" from="Enemigo2/AreaAtaq" to="Enemigo2" method="_on_AreaAtaq_body_entered"]
+[connection signal="body_entered" from="Enemigo3/AreaVision" to="Enemigo3" method="_on_AreaVision_body_entered"]
+[connection signal="body_exited" from="Enemigo3/AreaVision" to="Enemigo3" method="_on_AreaVision_body_exited"]
+[connection signal="body_entered" from="Enemigo3/AreaAtaq" to="Enemigo3" method="_on_AreaAtaq_body_entered"]
+[connection signal="body_entered" from="Enemigo4/AreaVision" to="Enemigo4" method="_on_AreaVision_body_entered"]
+[connection signal="body_exited" from="Enemigo4/AreaVision" to="Enemigo4" method="_on_AreaVision_body_exited"]
+[connection signal="body_entered" from="Enemigo4/AreaAtaq" to="Enemigo4" method="_on_AreaAtaq_body_entered"]
+[connection signal="body_entered" from="Enemigo5/AreaVision" to="Enemigo5" method="_on_AreaVision_body_entered"]
+[connection signal="body_exited" from="Enemigo5/AreaVision" to="Enemigo5" method="_on_AreaVision_body_exited"]
+[connection signal="body_entered" from="Enemigo5/AreaAtaq" to="Enemigo5" method="_on_AreaAtaq_body_entered"]
+[connection signal="body_entered" from="Enemigo6/AreaVision" to="Enemigo6" method="_on_AreaVision_body_entered"]
+[connection signal="body_exited" from="Enemigo6/AreaVision" to="Enemigo6" method="_on_AreaVision_body_exited"]
+[connection signal="body_entered" from="Enemigo6/AreaAtaq" to="Enemigo6" method="_on_AreaAtaq_body_entered"]
+[connection signal="body_entered" from="Enemigo7/AreaVision" to="Enemigo7" method="_on_AreaVision_body_entered"]
+[connection signal="body_exited" from="Enemigo7/AreaVision" to="Enemigo7" method="_on_AreaVision_body_exited"]
+[connection signal="body_entered" from="Enemigo7/AreaAtaq" to="Enemigo7" method="_on_AreaAtaq_body_entered"]
