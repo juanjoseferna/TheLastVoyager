@@ -1122,8 +1122,11 @@ anims/j_idle = SubResource( 3 )
 anims/j_salto = SubResource( 7 )
 
 [node name="Enemigo" type="KinematicBody2D" parent="."]
-position = Vector2( 453, 158 )
+position = Vector2( 295, 150 )
 script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="Enemigo"]
 texture = ExtResource( 8 )

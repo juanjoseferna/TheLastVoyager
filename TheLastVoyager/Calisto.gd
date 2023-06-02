@@ -2,7 +2,6 @@ extends Position2D
 
 var Velocidad = Vector2()
 var puede_saltar
-var puede_disparar = true
 export (float) var GRAVEDAD = 6000
 export (float) var VEL_MOVIMIENTO = 4000
 export (float) var VEL_SALTO = 6000
@@ -12,15 +11,12 @@ export (Vector2) var spawnB_izq
 
 func _physics_process(delta):
 	Velocidad.y += GRAVEDAD * delta
-	Globales.jugador_pos = Velocidad
 	spawnB_izq = get_node("Cuerpo/spawBala").position
 	
 	if (!get_node("Cuerpo/CalistoSpr").flip_h):
 		get_node("Cuerpo/spawBala").position = spawnB_izq
-		Globales.flipflop = false
 	else:
 		get_node("Cuerpo/spawBala").position.x *= -1
-		Globales.flipflop = true
 		
 	if(Input.is_action_pressed("tecla_a")):
 		Velocidad.x = -VEL_MOVIMIENTO
@@ -50,12 +46,11 @@ func _physics_process(delta):
 
 		puede_saltar = false
 	
-	if(Input.is_action_pressed("ClickIzq") && puede_disparar):
-		puede_disparar = false
-		get_node("Cuerpo/Tiempo").start()
+	if(Input.is_action_pressed("ClickIzq")):
 		var newBala = balaPrinc.instance()
 		newBala.global_position = get_node("Cuerpo/spawBala").global_position
 		get_tree().get_nodes_in_group("main")[0].add_child(newBala)
+		
 
 	var movimiento = Velocidad * delta
 	get_node("Cuerpo").move_and_slide(movimiento)
@@ -65,7 +60,3 @@ func _physics_process(delta):
 		if(obj_colisionado.is_in_group("suelo")):
 			puede_saltar = true
 			
-
-
-func _on_Tiempo_timeout():
-	puede_disparar = true
