@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Sprites/j1_idle.png" type="Texture" id=1]
 [ext_resource path="res://Calisto.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Sprites/j1_jump.png" type="Texture" id=5]
 [ext_resource path="res://bala_basic.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Sprites/j1_down.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/enemy1.png" type="Texture" id=8]
+[ext_resource path="res://Enemigo1.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 705.001, 2.1875 )
@@ -704,6 +706,58 @@ tracks/5/keys = {
 "values": [ Vector2( -14, 1 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 10, 16 )
+
+[sub_resource type="Animation" id=52]
+resource_name = "Enem_jump"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=50]
+resource_name = "Enem_run"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=51]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
 [node name="main" type="Node2D" groups=["main"]]
 
 [node name="Mapa" type="Sprite" parent="."]
@@ -1066,5 +1120,22 @@ anims/j_arriba = SubResource( 18 )
 anims/j_corriendo = SubResource( 4 )
 anims/j_idle = SubResource( 3 )
 anims/j_salto = SubResource( 7 )
+
+[node name="Enemigo" type="KinematicBody2D" parent="."]
+position = Vector2( 453, 158 )
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo"]
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo"]
+shape = SubResource( 49 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemigo"]
+anims/Enem_jump = SubResource( 52 )
+anims/Enem_run = SubResource( 50 )
+anims/RESET = SubResource( 51 )
 
 [connection signal="timeout" from="Calisto/Cuerpo/Tiempo" to="Calisto" method="_on_Tiempo_timeout"]

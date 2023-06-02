@@ -12,6 +12,7 @@ export (Vector2) var spawnB_izq
 
 func _physics_process(delta):
 	Velocidad.y += GRAVEDAD * delta
+	Globales.jugador_pos = Velocidad
 	spawnB_izq = get_node("Cuerpo/spawBala").position
 	
 	if (!get_node("Cuerpo/CalistoSpr").flip_h):
