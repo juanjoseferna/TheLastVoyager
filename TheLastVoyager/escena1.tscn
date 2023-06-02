@@ -323,7 +323,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -16, 14 ) ]
+"values": [ Vector2( -23, 14 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("Cuerpo/CalistoSpr:frame")
@@ -410,7 +410,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -3, -23 ) ]
+"values": [ Vector2( -3, -28 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Cuerpo/Colision:scale")
@@ -536,7 +536,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -13, -3 ) ]
+"values": [ Vector2( -17, -3 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -623,7 +623,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -13, 1 ) ]
+"values": [ Vector2( -18, 1 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -701,7 +701,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -13, 1 ) ]
+"values": [ Vector2( -14, 1 ) ]
 }
 
 [node name="main" type="Node2D" groups=["main"]]
@@ -1032,7 +1032,7 @@ scale = Vector2( 0.999997, 0.999997 )
 shape = SubResource( 48 )
 
 [node name="Calisto" type="Position2D" parent="."]
-position = Vector2( 96, 141 )
+position = Vector2( 207, 143 )
 script = ExtResource( 2 )
 GRAVEDAD = 2000.0
 VEL_SALTO = 3500.0
@@ -1055,6 +1055,10 @@ zoom = Vector2( 0.4, 0.4 )
 [node name="spawBala" type="Position2D" parent="Calisto/Cuerpo"]
 position = Vector2( -14, 1 )
 
+[node name="Tiempo" type="Timer" parent="Calisto/Cuerpo"]
+wait_time = 0.2
+one_shot = true
+
 [node name="animacion_J1" type="AnimationPlayer" parent="Calisto"]
 anims/RESET = SubResource( 2 )
 anims/j_agachado = SubResource( 17 )
@@ -1063,5 +1067,4 @@ anims/j_corriendo = SubResource( 4 )
 anims/j_idle = SubResource( 3 )
 anims/j_salto = SubResource( 7 )
 
-[node name="CuerpoBala" parent="." instance=ExtResource( 6 )]
-position = Vector2( -163, 53 )
+[connection signal="timeout" from="Calisto/Cuerpo/Tiempo" to="Calisto" method="_on_Tiempo_timeout"]
